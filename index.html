@@ -89,11 +89,20 @@
         text-decoration: underline;
       }
 
+      .intro {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 4px;
+      }
+
       #help-open {
+        flex-shrink: 0;
         font-size: 12px;
         padding: 1px 8px;
-        margin-left: 6px;
         border-radius: 6px;
+        white-space: nowrap;
       }
 
       #help {
@@ -144,8 +153,6 @@
       .subtitle {
         color: var(--muted);
         font-size: 13px;
-        margin-top: 4px;
-        max-width: 680px;
       }
 
       section {
@@ -696,11 +703,13 @@
       <h1>
         <a href="https://rjayasin.github.io/">Ruvan</a> <span class="crumb">/ cystic-index</span>
       </h1>
-      <p class="subtitle">
-        An automated image analysis tool for measuring cystic index and the percentage of cystic
-        collecting duct organoids.
+      <div class="intro">
+        <p class="subtitle">
+          An automated image analysis tool for measuring cystic index and the percentage of cystic
+          collecting duct organoids.
+        </p>
         <button type="button" id="help-open" aria-haspopup="dialog">how to use</button>
-      </p>
+      </div>
     </header>
 
     <dialog id="help" aria-labelledby="help-title">
